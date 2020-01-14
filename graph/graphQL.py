@@ -1,5 +1,4 @@
 from ariadne import QueryType, gql, make_executable_schema
-from ariadne.asgi import GraphQL
 
 from graph.githubApi import call_repos_by_user, call_detail_by_repo
 
