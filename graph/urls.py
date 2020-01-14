@@ -18,10 +18,8 @@ Including another URLconf
 from graph.graphQL import schema
 
 from ariadne.contrib.django.views import GraphQLView
-from django.contrib import admin
 from django.urls import path
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('graphql/', GraphQLView.as_view(schema=schema), name='graphql'),
+    path('', GraphQLView.as_view(schema=schema), name='graphql'),
 ]
