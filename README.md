@@ -68,6 +68,7 @@ $ heroku apps:create graphql-captalys
 
 
 Configuração das variáveis de ambiente
+(Estamos usando o DEBUG=True para poder usar o playground do graphQL)
 ```
 $ heroku config:set SECRET_KEY='8m%xyej-l@1#61-4kep2$-16t!%sv$8ei03bra3@t=9e*lc*$%'
 
