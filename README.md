@@ -48,13 +48,41 @@ $ heroku login
 ```
 #### Clonar o repositório
 
-Use o Git to clone para clonar o projeto graphql-jovito
+Use o Git para para clonar o projeto captalys-django
 
 ```
-$ heroku git:clone -a graphql-jovito
-$ cd graphql-jovito
+$ git@github.com:thiagoliof/captalys-django.git
+$ cd captalys-django
 ```
-#### Publicar alterações
+
+Precisamos remover o remote origin que está apontando para o github.
+Vamos usar a estrutura de git do próprio heroku para fazer o deploy
 ```
-git push heroku master --force
+$ git remote remove origin
 ```
+
+Cria aplicação no heroku
+```
+$ heroku apps:create graphql-captalys
+```
+
+
+Configuração das variáveis de ambiente
+```
+$ heroku config:set SECRET_KEY='8m%xyej-l@1#61-4kep2$-16t!%sv$8ei03bra3@t=9e*lc*$%'
+
+$ heroku config:set DEBUG=True
+
+$ heroku config:set DISABLE_COLLECTSTATIC=1
+```
+
+#### Publicar aplicação
+```
+$ git push heroku master --force
+```
+
+#### Para visualizar a aplicação em produção
+```
+$ heroku open
+```
+
