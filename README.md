@@ -30,7 +30,7 @@ Query para acessar os detalhes de um repositório específico:
 
 ```javascript
 {
-  repo(user: "thiagoliof", repo: "backend"){
+  repo(user: "thiagoliof", repo: "captalys-django"){
     name,
     full_name
   }
